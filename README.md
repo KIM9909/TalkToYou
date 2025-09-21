@@ -6,6 +6,7 @@
 - Frontend: React.js
 - Backend: Spring Boot
 - Database: MongoDB, Redis
-- Infrastructure: AWS EKS, Terraform
+- Infrastructure: AWS EKS, Terraform, Docker, Kubernetes
 - CI/CD: Jenkins, ArgoCD
 - Monitoring: Prometheus, Grafana
+
