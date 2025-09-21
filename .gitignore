@@ -1,0 +1,119 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# ========================================
+# Frontend (React)
+# ========================================
+# dependencies
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# testing
+frontend/coverage/
+
+# production
+frontend/build/
+
+# misc
+frontend/.DS_Store
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ========================================
+# Backend (Spring Boot)
+# ========================================
+backend/target/
+backend/build/
+backend/.gradle/
+backend/gradle/
+backend/gradlew
+backend/gradlew.bat
+backend/.idea/
+backend/*.iml
+backend/*.ipr
+backend/*.iws
+backend/out/
+backend/bin/
+
+# ========================================
+# Environment & Secrets
+# ========================================
+.env
+*.env
+!.env.example
+.env.local
+.env.*.local
+
+# ========================================
+# Infrastructure (Terraform)
+# ========================================
+infrastructure/*.tfstate
+infrastructure/*.tfstate.*
+infrastructure/.terraform/
+infrastructure/.terraform.lock.hcl
+infrastructure/terraform.tfvars
+infrastructure/*.tfplan
+
+# ========================================
+# Docker
+# ========================================
+.dockerignore
+
+# ========================================
+# Kubernetes
+# ========================================
+k8s/secrets/
+*.secret.yaml
+
+# ========================================
+# IDE & Editor
+# ========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ========================================
+# OS
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================================
+# Logs
+# ========================================
+*.log
+logs/
+log/
+
+# ========================================
+# Temporary files
+# ========================================
+*.tmp
+*.temp
+.cache/
+
+# ========================================
+# AWS & Cloud
+# ========================================
+.aws/
+*.pem
+*.key
+
+# ========================================
+# Jenkins
+# ========================================
+jenkins/secrets/
