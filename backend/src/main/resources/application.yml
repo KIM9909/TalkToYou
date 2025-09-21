@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: talktoyou-backend
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/talktotyou
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 2000ms
+
+  devtools:
+    restart:
+      enabled: true
+
+logging:
+  level:
+    com.talktoyou: DEBUG
+    org.springframework.web.socket: DEBUG

@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/talktoyou_dev
+    redis:
+      host: localhost
+      port: 6379
