@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: talktoyou-mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: talktoyou
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - talktoyou-network
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: talktoyou-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - talktoyou-network
+
+  # MongoDB 관리용 도구 (선택사항)
+  mongo-express:
+    image: mongo-express:latest
+    container_name: talktoyou-mongo-express
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongodb:27017/talktoyou
+    depends_on:
+      - mongodb
+    networks:
+      - talktoyou-network
+
+volumes:
+  mongodb_data:
+  redis_data:
+
+networks:
+  talktoyou-network:
+    driver: bridge
