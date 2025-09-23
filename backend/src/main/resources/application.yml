@@ -17,6 +17,12 @@ spring:
     restart:
       enabled: true
 
+# JWT 설정
+app:
+  jwt:
+    secret: mySecretKey1234567890123456789012345678901234567890
+    expiration: 86400000 # 24시간 (밀리초)
+
 logging:
   level:
     com.talktoyou: DEBUG
