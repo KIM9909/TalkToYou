@@ -42,6 +42,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll() // 인증 관련 API는 모두 허용
                         .requestMatchers("/api/rooms/**").permitAll()
+                        .requestMatchers("/api/messages/**").permitAll()
                         .requestMatchers("/ws/**").permitAll() // WebSocket 연결 허용
                         .requestMatchers("/actuator/**").permitAll() // 액추에이터 허용 (개발용)
                         .anyRequest().authenticated() // 나머지는 인증 필요
